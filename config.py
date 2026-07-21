@@ -1,31 +1,18 @@
-"""
-✦ ʀᴜʜɪ 𝐗 ᴍᴜꜱɪᴄ ✦ - Configuration
-"""
-
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
 
-# Bot Configuration
-API_ID = int(os.getenv("API_ID", "0"))
-API_HASH = os.getenv("API_HASH", "")
-BOT_TOKEN = os.getenv("BOT_TOKEN", "")
+# Telegram Configuration
+API_ID = int(os.getenv('API_ID', '30137612'))
+API_HASH = os.getenv('API_HASH', '8a5ff838315a4bc122dcca04f373fc5d')
+BOT_TOKEN = os.getenv('BOT_TOKEN', '8500544506:AAFIf16VbGjCDH2VMy0gG6YMWbr1rujKxT0')
 
-# Spotify Configuration (Optional)
-SPOTIFY_CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID", "")
-SPOTIFY_CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET", "")
+# Admin Configuration
+ADMIN_IDS = [int(x) for x in os.getenv('ADMIN_IDS', '7342935260').split(',')]
 
-# Admin IDs
-ADMIN_IDS = list(map(int, os.getenv("ADMIN_IDS", "").split(","))) if os.getenv("ADMIN_IDS") else []
-
-# Bot Settings
-BOT_NAME = "✦ ʀᴜʜɪ 𝐗 ᴍᴜꜱɪᴄ ✦"
-BOT_USERNAME = "RuhiMusicBot"
+# Bot Name
+BOT_NAME = 'Ruhi Music Bot'
 
 # Logging
-LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
-
-# Music Settings
-MAX_QUEUE_SIZE = 100
-DOWNLOAD_DIR = "downloads"
+LOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO')
